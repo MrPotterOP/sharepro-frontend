@@ -1,0 +1,67 @@
+.section-how-it-works {
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+}
+.work-brief-container {
+    text-align: center;
+}
+.work-brief-title-container {
+    background-color: #6600cc19;
+    padding: .3rem;
+    width: 8rem;
+    margin: .5rem auto;
+    border-radius: 5rem;
+}
+
+.work-brief-title-container h2 {
+    font-size: var(--small-font-size);
+    color: var(--color-first);
+}
+
+.work-process-container {
+    display: grid;
+    gap: 1.6rem;
+    margin: 3.5rem 0;
+}
+
+.work-step-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+.work-process-container .work-step-container:nth-child(2){
+    text-align: end;
+}
+
+
+@media (min-width: 43.75em){
+    .work-brief-container p {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .work-step-container {
+        flex-direction: row;
+        padding: 1rem 3rem;
+        gap: 3rem;
+    }
+    .work-step-container img {
+        width: 20rem;
+    }
+    .work-step-description-container{
+        padding: 1rem 3rem;
+    }
+    .work-process-container .work-step-container:nth-child(2){
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+}
+
+@media (min-width: 67em){
+    .work-step-container{
+        padding: 1rem 9rem;
+        gap: 6rem;
+    }
+    .work-step-description-container{
+        max-width: 26rem;
+    }
+}

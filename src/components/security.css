@@ -1,0 +1,13 @@
+.security-section-container{    
+    text-align: center;
+    margin-top: 4rem;
+}
+.security-form {
+    width: 400px;
+    margin: auto;
+}
+
+
+.security-form input {
+    margin: 20px auto;
+}

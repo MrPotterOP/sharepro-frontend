@@ -1,0 +1,39 @@
+.download-photo-container {
+    margin: 2rem;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.download-photo-container .shared-img {
+    width: 250px;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.shared-img-details-container {
+    text-align: center;
+}
+.shared-img-details-container p{
+    color: var(--color-first);
+}
+.shared-img-details-container h4 {
+    margin: 20px 0;
+}
+.shared-img-details-container h4 span {
+    color: var(--color-second);
+}
+
+.shared-img-details-container button {
+    background-color: var(--color-second);
+}
+
+@media (min-width: 43.7em){
+    .download-photo-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .download-photo-container .shared-img {
+        width: 400px;
+    }
+}
