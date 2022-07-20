@@ -24,9 +24,9 @@ const Footer = ()=>{
                 </div>
                 <div className="footer-context-container">
                     <h2>Follow Us</h2>
-                    <Link to="#">Instagram</Link>
-                    <Link to="#">Twitter</Link>
-                    <Link to="#">Github</Link>
+                    <a href="https://www.instagram.com/shubham_ubarhande/">Instagram</a>
+                    <a href="https://twitter.com/brainlessdot">Twitter</a>
+                    <a href="https://github.com/MrPotterOP/">Github</a>
                 </div>
             </div>
             <div className="footer-copyright-container">
