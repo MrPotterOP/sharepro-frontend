@@ -11,7 +11,8 @@ import Status from "../Status";
 const DownloadPage = ()=>{
     const location  = useLocation().search;
     const querry = location.split("=")[1];
-    const apiUrl = "https://sharepro-api.herokuapp.com/api/check_id";
+    const apiUrl = "https://sharepro.cyclic.app/api/check_id";
+    // const apiUrl = "https://sharepro-api.herokuapp.com/api/check_id";
 
     const [status, setStatus] = useState("loading");
 

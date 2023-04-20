@@ -17,7 +17,7 @@ const WorkSection = ()=>{
                     
                     <div className="work-step-description-container">
                         <h3>Add Photo</h3>
-                        <p>Firstly you need to select and add the photo you want to share.</p>
+                        <p>Firstly you need to seelect and add the photo you want to share.</p>
                     </div>
                 </div>
 

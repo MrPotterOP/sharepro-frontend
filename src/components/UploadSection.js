@@ -11,7 +11,8 @@ const UploadSection = ()=>{
     const [fileName, setFileName] = useState("/images/step1.png");
     const [photo, setPhoto] = useState();
     const [alert, setAlert] = useState(false);
-    const apiUrl = "https://sharepro-api.herokuapp.com/api/upload";
+    // const apiUrl = "https://sharepro-api.herokuapp.com/api/upload";
+    const apiUrl = "https://sharepro.cyclic.app/api/api/upload";
 
     const [responseData, setResponseData] = useState();
     const [status, setStatus] = useState("");
@@ -54,7 +55,7 @@ const UploadSection = ()=>{
     }
 
     const handleSubmit = ()=> {
-        if(!photo || inputs.name.length <= 4 || inputs.name.length >= 20 || inputs.limit >50 || inputs.limit === 0 || inputs.password.length <= 6){
+        if(!photo || inputs.name.length <= 1 || inputs.name.length >= 20 || inputs.limit >50 || inputs.limit === 0 || inputs.password.length <= 3){
             showWarnings();
         }else{
             setStatus("loading");
@@ -92,8 +93,8 @@ const UploadSection = ()=>{
                 <div className="upload-inputs-container">
                     <h2>Uploader's Name</h2>
                     <label>This name will be shown as uploaded by the name provided.</label>
-                    <input className="input-primary" type="text" onChange={(e)=>{handleInput(e.target.type, e.target.value)}} maxLength={25} placeholder="Your Name"></input>
-                    <p>by default it is set to Anonymous.</p>
+                    <input className="input-primary" type="text" onChange={(e)=>{handleInput(e.target.type, e.target.value)}} maxLength={20} placeholder="Your Name"></input>
+                    <p>by default it is set to Anonymous.[Not should be more than 20 characters]</p>
                 </div>
 
                 <div className={alert ? "upload-inputs-container show-warnings" : "upload-inputs-container"}>
@@ -106,7 +107,7 @@ const UploadSection = ()=>{
                 <div className={alert ? "upload-inputs-container show-warnings" : "upload-inputs-container"}>
                     <h2>Set Password</h2>
                     <label>Set the Paasword</label>
-                    <input type="password" min={6} className="input-primary" onChange={(e)=>{handleInput(e.target.type, e.target.value)}} placeholder="Choose Password"></input>
+                    <input type="password" min={4} className="input-primary" onChange={(e)=>{handleInput(e.target.type, e.target.value)}} placeholder="Choose Password"></input>
                     <p className={inputs.password.length<4 ? "warning-message" : "success-message"}>{inputs.password.length<4 ? "passowrd should have more than 4 characters" : "Password Acceptable"}</p>
                 </div>
                 
