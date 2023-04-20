@@ -26,7 +26,9 @@ const Security = (props)=>{
     }
 
     const handleSubmit = ()=>{
-        axios.patch(apiUrl, {id, password})
+        axios.patch(apiUrl, {id, password}, {headers: {
+            'Content-Type': 'application/json'
+        }})
         .then(r => r.data ? setData(r.data) : null)
         .catch (e => e.response ? handleError() : null);
     }

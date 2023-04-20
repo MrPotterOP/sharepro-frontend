@@ -19,7 +19,9 @@ const DownloadPage = ()=>{
 
     useEffect(()=>{
         const checkId = ()=>{
-            axios.patch(apiUrl, {id: querry})
+            axios.patch(apiUrl, {id: querry}, {headers: {
+                'Content-Type': 'application/json'
+            }})
             .then(r => r.data ? setStatus("") : null)
             .catch (e => e.response ? setStatus("notFound") : null);
     

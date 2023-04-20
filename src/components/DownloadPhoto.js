@@ -13,7 +13,9 @@ const DownloadPhoto = (props)=>{
     // const apiUrl = "https://sharepro-api.herokuapp.com/api/download";
 
     const downloadRequest = ()=>{
-        axios.put(apiUrl, {id, photoID})
+        axios.put(apiUrl, {id, photoID}, {headers: {
+            'Content-Type': 'application/json'
+        }})
         .then(r => r.data ? navigate("/") : null)
         .catch(e => e.response ? navigate("/") : null);
     }
