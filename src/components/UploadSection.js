@@ -12,7 +12,7 @@ const UploadSection = ()=>{
     const [photo, setPhoto] = useState();
     const [alert, setAlert] = useState(false);
     // const apiUrl = "https://sharepro-api.herokuapp.com/api/upload";
-    const apiUrl = "https://sharepro.cyclic.app/api/upload";
+    const apiUrl = "https://sharepro-8qes.onrender.com/api/upload";
 
     const [responseData, setResponseData] = useState();
     const [status, setStatus] = useState("");

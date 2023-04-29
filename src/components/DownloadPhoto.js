@@ -9,7 +9,7 @@ const DownloadPhoto = (props)=>{
     const {url, limit, downloaded, name, id, photoID} = props;
     const fileName = `sharepro-${Date.now()}.${url.split(".")[3]}`;
 
-    const apiUrl = "https://sharepro.cyclic.app/api/download";
+    const apiUrl = "https://sharepro-8qes.onrender.com/api/download";
     // const apiUrl = "https://sharepro-api.herokuapp.com/api/download";
 
     const downloadRequest = ()=>{
